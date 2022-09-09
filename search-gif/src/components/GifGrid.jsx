@@ -8,6 +8,8 @@ export const GifGrid = ({ category }) => {
   return ( <>
     <section className="card-grid">
       <h3> { category } </h3>
+      { isLoading && ( <h2 > Cargando... </h2> ) }
+
       { gifs.map( (item) => (
         <GifItem key={ item.id }
           { ...item }

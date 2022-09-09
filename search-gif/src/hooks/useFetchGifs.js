@@ -17,10 +17,9 @@ export const useFetchGifs = ( category ) => {
   const [ isLoading, setIsLoading ] = useState(true);
 
   useEffect(() => {
-    getGifs(category).then( gifs => {
-      setIsLoading(false);
-      setGifs(gifs);
-    });
+    getGifs(category)
+      .then( gifs => setGifs(gifs) )
+      .finally( _ => setIsLoading(false) );
   }, [ ])
 
   return {
