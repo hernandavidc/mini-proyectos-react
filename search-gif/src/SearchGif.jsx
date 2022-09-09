@@ -8,7 +8,7 @@ export const SearchGif = () => {
   const addCategory = (val) => {
     if (categories.includes(val)) return;
 
-    setCategories([...categories, val]);
+    setCategories([val, ...categories]);
   }
 
   return (

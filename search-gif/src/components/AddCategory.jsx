@@ -5,7 +5,8 @@ export const AddCategory = (props) => {
   const [inputValue, setInputValue] = useState('');
 
   const onInputChange = ({ target }) => setInputValue(target.value);
-  const onSubmit = (event, props) => {
+
+  const onSubmit = (event) => {
       event.preventDefault();
       if(inputValue.trim().length <= 1) return;
 
