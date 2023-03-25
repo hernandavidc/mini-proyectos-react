@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const getGifs = async (category) => {
+export const getGifs = async (category) => {
   const url = `https://api.giphy.com/v1/gifs/search?q=${category}&limit=10&api_key=d5YoY0PK8cJr7yDrgvlyhGP1lpJfs9ur`;
   const { data } = await fetch(url).then((res) => res.json());
 
